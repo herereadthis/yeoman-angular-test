@@ -17,7 +17,8 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'humanTimeFilter'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -28,6 +29,10 @@ angular
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
+      })
+      .when('/human-time', {
+          templateUrl: 'scripts/componentDemo/humantime/human-time-view.html',
+          controller: 'HumanTimeController'
       })
       .otherwise({
         redirectTo: '/'
