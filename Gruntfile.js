@@ -44,6 +44,12 @@ module.exports = function (grunt) {
         files: ['test/spec/{,*/}*.js'],
         tasks: ['newer:jshint:test', 'karma']
       },
+      less: {
+          files: [
+              '<%= yeoman.app %>/less/{,*/}*.less'
+          ],
+          tasks: ['less']
+      },
       styles: {
         files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
         tasks: ['newer:copy:styles', 'autoprefixer']
@@ -174,6 +180,16 @@ module.exports = function (grunt) {
         }]
       }
     },
+        less: {
+            compile: {
+                options: {
+                    paths: ['<%= yeoman.app %>/less']
+                },
+                files: {
+                    '<%= yeoman.app %>/styles/main.css': '<%= yeoman.app %>/less/main.less'
+                }
+            }
+        },
 
     // Automatically inject Bower components into the app
     wiredep: {
@@ -427,6 +443,7 @@ module.exports = function (grunt) {
     'cssmin',
     'uglify',
     'filerev',
+    'less',
     'usemin',
     'htmlmin'
   ]);
