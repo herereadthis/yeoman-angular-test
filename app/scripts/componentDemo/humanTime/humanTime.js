@@ -41,3 +41,4 @@ angular.module('yeomanAngularTestApp')
             templateUrl: '/scripts/componentDemo/humanTime/humanTime.html'
         };
     });
+    

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('mousethiefApp')
+angular.module('yeomanAngularTestApp')
     .controller('HumanTimeController', ['$scope', function($scope) {
         $scope.customer = {
             name: 'Naomi',
@@ -41,3 +41,4 @@ angular.module('mousethiefApp')
             templateUrl: '/scripts/componentDemo/humanTime/humanTime.html'
         };
     });
+    
