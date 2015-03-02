@@ -1,6 +1,6 @@
 'use strict';
 
-describe('Controller: MainCtrl', function () {
+describe('Controller: Human Time', function () {
 
   // load the controller's module
   beforeEach(module('yeomanAngularTestApp'));
@@ -17,6 +17,6 @@ describe('Controller: MainCtrl', function () {
   }));
 
   it('should attach a list of time stamps to the scope', function () {
-    expect(scope.timeStamp.length).toBe(3);
+    expect(scope.timeStamp.length).toBe(24);
   });
 });
